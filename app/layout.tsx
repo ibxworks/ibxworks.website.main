@@ -1,12 +1,23 @@
-import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
-import './globals.css'
+import type React from "react"
+import type { Metadata } from "next"
+import { Nunito_Sans, Orbitron } from "next/font/google"
+import "./globals.css"
+
+const nunitoSans = Nunito_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700", "800"],
+})
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+  variable: "--font-orbitron",
+})
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: "IBX - Engineers and Scientists",
+  description: "A group of engineers and scientists who build stuff, often cool or funny",
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -15,17 +26,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <style>{`
-html {
-  font-family: ${GeistSans.style.fontFamily};
-  --font-sans: ${GeistSans.variable};
-  --font-mono: ${GeistMono.variable};
-}
-        `}</style>
-      </head>
-      <body>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${nunitoSans.className} ${orbitron.variable}`}>{children}</body>
     </html>
   )
 }
