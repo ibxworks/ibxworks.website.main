@@ -8,6 +8,7 @@ const nunitoSans = Nunito_Sans({
   weight: ["300", "400", "600", "700", "800"],
 })
 
+// Updated variable name to match CSS expectation
 const orbitron = Orbitron({
   subsets: ["latin"],
   weight: ["400", "700", "900"],

@@ -185,7 +185,7 @@ export default function Home() {
                     color: "transparent",
                   }}
                 >
-                  UILD
+                  UILL
                 </span>
               </span>
               <span className="text-custom-blue">X</span>
