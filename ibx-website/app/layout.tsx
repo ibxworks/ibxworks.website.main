@@ -16,7 +16,7 @@ const orbitron = Orbitron({
 
 export const metadata: Metadata = {
   title: "IBX - Engineers and Scientists",
-  description: "A group of engineers and scientists who build stuff, often cool or funny",
+  description: "A group of eeengineers and scientists who build stuff, often cool or funny",
     generator: 'v0.dev'
 }
 
